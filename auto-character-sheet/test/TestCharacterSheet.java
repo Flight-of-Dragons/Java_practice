@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 
 public class TestCharacterSheet {
 	String name = "Manetherin";
+    int Strength = 13;
 	CharacterSheet manny = new CharacterSheet(name);
 
 	@Test
@@ -20,5 +21,8 @@ public class TestCharacterSheet {
 	}
 
 	@Test
-	public void test
+	public void testGetStrengthAttribute() {
+		manny.setStrength(Strength);
+        assertEquals(manny.getStrength(), Strength);
+    }
 }
